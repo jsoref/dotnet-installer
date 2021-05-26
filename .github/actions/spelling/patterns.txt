@@ -1,0 +1,51 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# GitHub SHAs
+\bapi.github\.com/repos/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+(?:/[^/]+/[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+\bgithub\.com/[^/]+/[^/]+[@#][0-9a-f]+\b
+# githubusercontent
+/[-a-z0-9]+\.githubusercontent\.com/[-a-zA-Z0-9?&=_\/.]*
+# gist github
+/gist\.github\.com/[^/]+/[0-9a-f]+
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+]*"
+# Contributor
+\[[^\]]+]\(https://github\.com/[^/]+\)
+
+# microsoft
+\b(?:download\.visualstudio|docs|msdn)\.microsoft\.com/[-_a-zA-Z0-9()=./]*
+# powerbi
+\bapp\.powerbi\.com/reportEmbed/[^"' ]*
+
+# Sha
+<Sha>[0-9a-f]*</Sha>
+sha512/[0-9a-f]*
+PublicKey=[0-9a-f]*
+
+# uuid:
+[<({"'>][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[<'"})>]
+
+# URL escaped characters
+\%[0-9A-F]{2}
+
+\\native\b
+\\netcore\b
+\\netcoreapp\b
+\\redist\b
+\\registrykeys\b
+\\release\b
+\\resources\b
+\\restore\b
+\\targets\b
+\\templates?\b
+\\tools\b
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
+
+# things
+ [a-z]\[[a-z]+\][, ]
+
+# tar arguments
+\b(?:\\n|)tar(?:\s+-[a-zA-Z]+|\s[a-z]+)+

@@ -1,0 +1,22 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-excludes
+(?:^|/)(?i)COPYRIGHT
+(?:^|/)(?i)LICEN[CS]E
+(?:^|/)package(?:-lock|)\.json$
+(?:^|/)vendor/
+/LCID/(?!1033)..../
+ignore$
+\.avi$
+\.ico$
+\.jpe?g$
+\.lock$
+\.map$
+\.min\.
+\.mod$
+\.mp[34]$
+\.png$
+\.wav$
+^eng/_prettyprint\.sh$
+^src/Microsoft\.Dotnet\.Sdk\.Internal/Class1\.cs$
+^src/redist/targets/packaging/windows/clisdk/dummyeula\.rtf$
+^\.gitattributes$
+^\.github/
